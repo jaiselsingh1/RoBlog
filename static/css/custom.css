@@ -1,3 +1,55 @@
+@font-face {
+  font-family: "Agave";
+  src: url("../fonts/agave/Agave-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Agave";
+  src: url("../fonts/agave/Agave-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  --font-family: "Agave", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --code-font-family: "Agave", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font-family: var(--font-family);
+  letter-spacing: 0;
+}
+
+.logo a,
+.entry-header h1,
+.entry-header h2,
+.post-title,
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  font-family: var(--font-family);
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: var(--code-font-family);
+}
+
 .post-entry,
 .first-entry,
 .post-single {

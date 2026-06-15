@@ -1,4 +1,4 @@
-baseURL: "https://example.github.io/"
+baseURL: "https://jaiselsingh1.github.io/RoBlog/"
 languageCode: "en-us"
 title: "RoBlog"
 copyright: "© 2026 RoBlog"
@@ -94,13 +94,13 @@ params:
   socialIcons:
     - name: github
       title: GitHub
-      url: "https://github.com/"
+      url: "https://github.com/jaiselsingh1/RoBlog"
     - name: rss
       title: RSS
       url: "/index.xml"
 
   editPost:
-    URL: "https://github.com/OWNER/REPO/tree/main/content"
+    URL: "https://github.com/jaiselsingh1/RoBlog/tree/main/content"
     Text: "Suggest changes"
     appendFilePath: true
 
