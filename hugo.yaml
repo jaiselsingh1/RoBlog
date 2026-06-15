@@ -1,0 +1,122 @@
+baseURL: "https://example.github.io/"
+languageCode: "en-us"
+title: "Research Notes"
+copyright: "© 2026 Research Notes"
+
+enableRobotsTXT: true
+enableEmoji: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+pagination:
+  pagerSize: 8
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+taxonomies:
+  category: categories
+  tag: tags
+
+module:
+  imports:
+    - path: github.com/adityatelange/hugo-PaperMod
+
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: archives
+      name: Archive
+      url: /archives/
+      weight: 20
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 30
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 40
+    - identifier: authors
+      name: Authors
+      url: /authors/
+      weight: 50
+    - identifier: faq
+      name: FAQ
+      url: /faq/
+      weight: 60
+
+params:
+  env: production
+  title: "Research Notes"
+  description: "Long-form notes, experiments, and essays published from Markdown."
+  keywords:
+    - blog
+    - research
+    - notes
+    - hugo
+  author:
+    - Jaisel Singh
+    - Ben Evans
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto
+  disableThemeToggle: false
+  mainSections:
+    - posts
+
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  ShowToc: true
+  TocOpen: false
+  UseHugoToc: true
+  comments: false
+
+  homeInfoParams:
+    Title: "Welcome to Research Notes"
+    Content: "A Hugo + PaperMod blog for publishing Markdown essays, reading notes, and project writeups."
+
+  socialIcons:
+    - name: github
+      title: GitHub
+      url: "https://github.com/"
+    - name: rss
+      title: RSS
+      url: "/index.xml"
+
+  editPost:
+    URL: "https://github.com/OWNER/REPO/tree/main/content"
+    Text: "Suggest changes"
+    appendFilePath: true
+
+  assets:
+    favicon: "/favicon.svg"
+    favicon16x16: "/favicon.svg"
+    favicon32x32: "/favicon.svg"
+    apple_touch_icon: "/favicon.svg"
+    disableFingerprinting: false
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    lineNos: false

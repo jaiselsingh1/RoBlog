@@ -1,0 +1,19 @@
+.post-entry,
+.first-entry,
+.post-single {
+  border-radius: 6px;
+}
+
+.coauthor-note {
+  margin: 0.35rem 0 0;
+  color: var(--secondary);
+  font-size: 0.875rem;
+}
+
+.coauthor-note a {
+  box-shadow: 0 1px 0 var(--secondary);
+}
+
+.post-content code {
+  border-radius: 4px;
+}
