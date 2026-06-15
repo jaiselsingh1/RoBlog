@@ -1,7 +1,7 @@
 baseURL: "https://example.github.io/"
 languageCode: "en-us"
-title: "Research Notes"
-copyright: "© 2026 Research Notes"
+title: "RoBlog"
+copyright: "© 2026 RoBlog"
 
 enableRobotsTXT: true
 enableEmoji: true
@@ -59,7 +59,7 @@ menu:
 
 params:
   env: production
-  title: "Research Notes"
+  title: "RoBlog"
   description: "Long-form notes, experiments, and essays published from Markdown."
   keywords:
     - blog
@@ -88,7 +88,7 @@ params:
   comments: false
 
   homeInfoParams:
-    Title: "Welcome to Research Notes"
+    Title: "Welcome to RoBlog"
     Content: "A Hugo + PaperMod blog for publishing Markdown essays, reading notes, and project writeups."
 
   socialIcons:

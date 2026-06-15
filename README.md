@@ -1,4 +1,4 @@
-# Research Notes
+# RoBlog
 
 Hugo + PaperMod blog scaffolded for GitHub Pages. It follows the same broad setup as Lilian Weng's blog: Markdown posts, Hugo static generation, PaperMod styling, and GitHub Pages deployment.
 

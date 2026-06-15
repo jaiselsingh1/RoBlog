@@ -1,3 +1,3 @@
-module github.com/jaisel/research-notes
+module github.com/jaisel/RoBlog
 
 go 1.24.0
