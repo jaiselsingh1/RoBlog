@@ -40,4 +40,4 @@ author:
   - Ben Evans
 ```
 
-Ben Evans is included in the site author metadata and linked from the Authors page.
+Both authors are included in the site metadata and linked from the Authors page.

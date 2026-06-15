@@ -30,9 +30,9 @@ The PaperMod theme is pulled as a Hugo module from `github.com/adityatelange/hug
 3. In repository settings, open **Pages** and set **Source** to **GitHub Actions**.
 4. Update `baseURL`, `params.socialIcons`, and `params.editPost.URL` in `hugo.yaml`.
 
-## Co-author
+## Authors
 
-[Ben Evans](https://github.com/bennevans) is included as an invited co-author in the site metadata and Authors page.
+Jaisel Singh and [Ben Evans](https://github.com/bennevans) are included as equal contributors in the site metadata and Authors page.
 
 After the remote repository exists, invite Ben as a collaborator with:
 

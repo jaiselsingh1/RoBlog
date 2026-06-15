@@ -36,7 +36,7 @@ author:
   - Ben Evans
 ```
 
-Ben Evans is listed as an invited co-author for this site.
+Jaisel Singh and Ben Evans are listed as equal contributors for this site.
 
 ## How does publishing work?
 
