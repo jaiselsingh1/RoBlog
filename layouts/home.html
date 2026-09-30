@@ -1,0 +1,49 @@
+{{- define "main" }}
+<header class="home-intro">
+  <h1>A notebook for robot learning.</h1>
+  {{ .Content }}
+</header>
+
+{{- $posts := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- $posts = where $posts "Params.hiddenInHomeList" "ne" true }}
+{{- $posts = $posts.ByDate.Reverse }}
+{{- with first 1 $posts }}
+<section class="home-section" aria-labelledby="latest-heading">
+  <div class="section-heading"><h2 id="latest-heading">Latest</h2></div>
+  {{- range . }}
+  <article class="latest-post">
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} <small>(Draft)</small>{{ end }}</a></h3>
+    <p class="post-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format site.Params.DateFormat }}</time>
+      <span aria-hidden="true"> · </span>{{ .ReadingTime }} min read
+    </p>
+    <p class="latest-summary">{{ .Summary | plainify | htmlUnescape }}</p>
+    <a class="read-more" href="{{ .RelPermalink }}">Keep reading <span aria-hidden="true">→</span><span class="sr-only">: {{ .Title }}</span></a>
+  </article>
+  {{- end }}
+</section>
+{{- end }}
+
+{{- with site.Taxonomies.tags.Alphabetical }}
+<section class="home-section" aria-labelledby="topics-heading">
+  <div class="section-heading"><h2 id="topics-heading">Topics</h2></div>
+  <ul class="topic-list">
+    {{- range . }}
+    <li><a href="{{ .Page.RelPermalink }}">{{ .Page.LinkTitle }}</a></li>
+    {{- end }}
+  </ul>
+</section>
+{{- end }}
+
+<section class="home-section" aria-labelledby="writing-heading">
+  <div class="section-heading">
+    <h2 id="writing-heading">Writing</h2>
+    <a href="{{ "posts/" | relURL }}">All writing <span aria-hidden="true">→</span></a>
+  </div>
+  {{- if $posts }}
+    {{- partial "writing_list.html" (first 8 $posts) }}
+  {{- else }}
+    <p>New notes will appear here.</p>
+  {{- end }}
+</section>
+{{- end }}

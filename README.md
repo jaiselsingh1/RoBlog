@@ -2,6 +2,12 @@
 
 Hugo + PaperMod blog scaffolded for GitHub Pages. It follows the same broad setup as Lilian Weng's blog: Markdown posts, Hugo static generation, PaperMod styling, and GitHub Pages deployment.
 
+## Design
+
+The reading layout takes inspiration from Steph Ango's site: a narrow column, warm neutral colors, quiet navigation, and a dated writing index. System fonts keep prose readable; the bundled Agave font is reserved for code and dates. Light and dark appearances follow the system preference and can be switched in the header.
+
+The homepage and writing lists live in `layouts/home.html` and `layouts/list.html`; visual styles live in `static/css/custom.css`. PaperMod still supplies post pages, search, archives, taxonomies, feeds, and code-copy controls. Its version is pinned in `go.mod` and `go.sum` so local and deployed builds use the same theme.
+
 ## Write a post
 
 Create a new post:

@@ -1,0 +1,25 @@
+{{- define "main" }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{- with .Description }}<div class="post-description">{{ . | markdownify }}</div>{{ end }}
+</header>
+
+{{- with .Content }}
+<div class="post-content md-content">{{ partial "anchored_headings.html" . }}</div>
+{{- end }}
+
+{{- $pages := union .RegularPages .Sections }}
+{{- $paginator := .Paginate $pages.ByDate.Reverse }}
+{{- partial "writing_list.html" $paginator.Pages }}
+
+{{- if gt $paginator.TotalPages 1 }}
+<nav class="pagination" aria-label="Writing pages">
+  {{- if $paginator.HasPrev }}
+  <a class="prev" href="{{ $paginator.Prev.URL }}">← Newer</a>
+  {{- end }}
+  {{- if $paginator.HasNext }}
+  <a class="next" href="{{ $paginator.Next.URL }}">Older →</a>
+  {{- end }}
+</nav>
+{{- end }}
+{{- end }}

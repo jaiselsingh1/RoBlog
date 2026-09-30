@@ -33,34 +33,22 @@ module:
 menu:
   main:
     - identifier: posts
-      name: Posts
+      name: Writing
       url: /posts/
       weight: 10
-    - identifier: archives
-      name: Archive
-      url: /archives/
+    - identifier: about
+      name: About
+      url: /about/
       weight: 20
     - identifier: search
       name: Search
       url: /search/
       weight: 30
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 40
-    - identifier: authors
-      name: Authors
-      url: /authors/
-      weight: 50
-    - identifier: faq
-      name: FAQ
-      url: /faq/
-      weight: 60
 
 params:
   env: production
   title: "RoBlog"
-  description: "Long-form notes, experiments, and essays published from Markdown."
+  description: "Notes on robotics, reinforcement learning, and the ideas behind intelligent machines."
   keywords:
     - blog
     - research
@@ -76,20 +64,17 @@ params:
     - posts
 
   ShowReadingTime: true
-  ShowShareButtons: true
+  ShowShareButtons: false
   ShowPostNavLinks: true
-  ShowBreadCrumbs: true
+  ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
-  ShowWordCount: true
+  ShowWordCount: false
   ShowRssButtonInSectionTermList: true
   ShowToc: true
   TocOpen: false
   UseHugoToc: true
   comments: false
-
-  homeInfoParams:
-    Title: "Welcome to RoBlog"
-    Content: "A Hugo + PaperMod blog for publishing Markdown essays, reading notes, and project writeups."
+  disableScrollToTop: true
 
   socialIcons:
     - name: github
@@ -105,10 +90,11 @@ params:
     appendFilePath: true
 
   assets:
-    favicon: "/favicon.svg"
-    favicon16x16: "/favicon.svg"
-    favicon32x32: "/favicon.svg"
-    apple_touch_icon: "/favicon.svg"
+    favicon: "favicon.svg"
+    favicon16x16: "favicon.svg"
+    favicon32x32: "favicon.svg"
+    apple_touch_icon: "favicon.svg"
+    safari_pinned_tab: "favicon.svg"
     disableFingerprinting: false
 
 markup:
